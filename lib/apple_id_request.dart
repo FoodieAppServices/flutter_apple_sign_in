@@ -42,7 +42,7 @@ class AppleIdRequest extends AuthorizationRequest {
       'user': user,
       'requestedOperation': requestedOperation!.value,
       'requestedScopes':
-          requestedScopes?.map((scope) => scope.value)?.toList() ?? []
+          requestedScopes?.map((scope) => scope.value).toList() ?? []
     };
   }
 }

@@ -15,7 +15,7 @@ class NativeAppleSignInButton extends StatelessWidget {
   final ButtonType type;
 
   /// A style for the authorization button.
-  final ButtonStyle style;
+  final AppleSSOButtonStyle style;
 
   /// A custom corner radius to be used by this button.
   final double cornerRadius;
@@ -23,7 +23,7 @@ class NativeAppleSignInButton extends StatelessWidget {
   const NativeAppleSignInButton(
       {this.onPressed,
       this.type = ButtonType.defaultButton,
-      this.style = ButtonStyle.white,
+      this.style = AppleSSOButtonStyle.white,
       this.cornerRadius = 4});
 
   @override

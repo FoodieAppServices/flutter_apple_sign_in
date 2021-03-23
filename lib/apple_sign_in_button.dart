@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 enum ButtonType { defaultButton, continueButton, signIn }
 
 /// A style for the authorization button.
-enum ButtonStyle { black, whiteOutline, white }
+enum AppleSSOButtonStyle { black, whiteOutline, white }
 
 /// A button for Sign in With Apple
 class AppleSignInButton extends StatefulWidget {
@@ -17,7 +17,7 @@ class AppleSignInButton extends StatefulWidget {
   final ButtonType type;
 
   /// A style for the authorization button.
-  final ButtonStyle style;
+  final AppleSSOButtonStyle style;
 
   /// A custom corner radius to be used by this button.
   final double cornerRadius;
@@ -25,11 +25,9 @@ class AppleSignInButton extends StatefulWidget {
   const AppleSignInButton({
     this.onPressed,
     this.type = ButtonType.defaultButton,
-    this.style = ButtonStyle.white,
+    this.style = AppleSSOButtonStyle.white,
     this.cornerRadius = 6,
-  })  : assert(type != null),
-        assert(style != null),
-        assert(cornerRadius != null);
+  });
 
   @override
   State<StatefulWidget> createState() => _AppleSignInButtonState();
@@ -41,17 +39,17 @@ class _AppleSignInButtonState extends State<AppleSignInButton> {
   @override
   Widget build(BuildContext context) {
     final bgColor =
-        widget.style == ButtonStyle.black ? Colors.black : Colors.white;
+        widget.style == AppleSSOButtonStyle.black ? Colors.black : Colors.white;
     final textColor =
-        widget.style == ButtonStyle.black ? Colors.white : Colors.black;
+        widget.style == AppleSSOButtonStyle.black ? Colors.white : Colors.black;
     final borderColor =
-        widget.style == ButtonStyle.white ? Colors.white : Colors.black;
+        widget.style == AppleSSOButtonStyle.white ? Colors.white : Colors.black;
 
     return GestureDetector(
       onTapDown: (_) => setState(() => _isTapDown = true),
       onTapUp: (_) {
         setState(() => _isTapDown = false);
-        widget?.onPressed!();
+        widget.onPressed!();
       },
       onTapCancel: () => setState(() => _isTapDown = false),
       child: AnimatedContainer(

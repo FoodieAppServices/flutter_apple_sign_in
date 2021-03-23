@@ -40,8 +40,6 @@ class AppleIdCredential {
   });
 
   factory AppleIdCredential.fromMap(Map map) {
-    assert(map != null);
-
     return AppleIdCredential(
       identityToken: map['identityToken'],
       authorizationCode: map['authorizationCode'],
@@ -58,7 +56,7 @@ class AppleIdCredential {
 
   static List<Scope> _scopesFromList(List? list) {
     if (list == null) {
-      return List();
+      return <Scope>[];
     }
 
     return list.map((scope) => Scope.rawValue(scope)).toList();

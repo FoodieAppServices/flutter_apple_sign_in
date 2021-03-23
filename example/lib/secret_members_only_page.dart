@@ -31,7 +31,7 @@ class SecretMembersOnlyPage extends StatelessWidget {
                   style: TextStyle(fontSize: 15),
                   textAlign: TextAlign.center,
                 ),
-                OutlineButton(
+                OutlinedButton(
                     child: Text("Log out"),
                     onPressed: () async {
                       await FlutterSecureStorage().deleteAll();

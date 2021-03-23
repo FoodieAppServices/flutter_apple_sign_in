@@ -21,7 +21,7 @@ class ButtonTestPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 ButtonComparison(
-                  style: ButtonStyle.whiteOutline,
+                  style: AppleSSOButtonStyle.whiteOutline,
                   type: ButtonType.signIn,
                 ),
                 ButtonComparison(
@@ -54,7 +54,7 @@ class ButtonTestPage extends StatelessWidget {
 }
 
 class ButtonComparison extends StatelessWidget {
-  final ButtonStyle style;
+  final AppleSSOButtonStyle style;
   final ButtonType type;
 
   ButtonComparison({@required this.style, @required this.type});
