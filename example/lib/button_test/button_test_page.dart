@@ -25,23 +25,23 @@ class ButtonTestPage extends StatelessWidget {
                   type: ButtonType.signIn,
                 ),
                 ButtonComparison(
-                  style: ButtonStyle.black,
+                  style: AppleSSOButtonStyle.black,
                   type: ButtonType.signIn,
                 ),
                 ButtonComparison(
-                  style: ButtonStyle.white,
+                  style: AppleSSOButtonStyle.white,
                   type: ButtonType.signIn,
                 ),
                 ButtonComparison(
-                  style: ButtonStyle.whiteOutline,
+                  style: AppleSSOButtonStyle.whiteOutline,
                   type: ButtonType.continueButton,
                 ),
                 ButtonComparison(
-                  style: ButtonStyle.black,
+                  style: AppleSSOButtonStyle.black,
                   type: ButtonType.continueButton,
                 ),
                 ButtonComparison(
-                  style: ButtonStyle.white,
+                  style: AppleSSOButtonStyle.white,
                   type: ButtonType.continueButton,
                 ),
               ],
